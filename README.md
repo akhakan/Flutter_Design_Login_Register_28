@@ -1,6 +1,5 @@
 # Flutter_Design_Login_Register_28
 
-![Tasarim28](ReadMeImages/tasarım28.png)
 
 ## 🎨 Proje Açıklaması
 
@@ -73,6 +72,84 @@ FilledButton(
 ```
 
 Benzer şekilde, diğer butonlar da ilgili sayfalara yönlendirilir.
+
+---
+
+## ✏️ TextField Kullanımı
+
+```dart
+TextField(
+  decoration: InputDecoration(
+    filled: true,
+    fillColor: const Color.fromARGB(255, 255, 255, 255),
+    border: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(12),
+      borderSide: BorderSide(
+        color: Colors.grey.withValues(alpha: 0.2),
+        width: 1.0,
+      ),
+    ),
+    enabledBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(12),
+      borderSide: BorderSide(
+        color: Colors.grey.withAlpha(120),
+        width: 1.0,
+      ),
+    ),
+    focusedBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(12),
+      borderSide: BorderSide(
+        color: Color.fromARGB(255, 231, 236, 241).withValues(alpha: 0.7),
+        width: 2.0,
+      ),
+    ),
+    hintText: 'Enter your password',
+    hintStyle: TextStyle(
+      color: Colors.black.withAlpha(120),
+    ),
+    contentPadding: const EdgeInsets.symmetric(
+      horizontal: 16,
+      vertical: 12,
+    ),
+  ),
+  style: const TextStyle(
+    color: Colors.black,
+    fontSize: 16,
+  ),
+  onChanged: (text) {
+    // Metin değiştiğinde yapılacak işlemler
+  },
+),
+```
+
+---
+
+## 🔘 FilledButton Kullanımı
+
+```dart
+FilledButton(
+  onPressed: () {
+    Navigator.pushNamed(context, '/login');
+  },
+  style: FilledButton.styleFrom(
+    backgroundColor: const Color.fromARGB(255, 195, 194, 235),
+    foregroundColor: Colors.black,
+    minimumSize: const Size(double.infinity, 60),
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(30),
+    ),
+  ),
+  child: Text(
+    'Login',
+    style: TextStyle(
+      color: Colors.black.withValues(alpha: 0.7),
+      fontSize: 22,
+      fontWeight: FontWeight.w900,
+      height: 1.3,
+    ),
+  ),
+),
+```
 
 ---
 
