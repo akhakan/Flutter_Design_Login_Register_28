@@ -197,7 +197,7 @@ flutter:
 ## 🧠 Notlar
 
 - Bu proje temel Flutter UI tasarımına örnektir.  
-- Bu proje Mobil Programlama dersinde öğrencilere anlatılırken geliştirilmiş bir projedir. Tasarım ve resimler YouTube @UiLover kanalındaki bir videoda paylaşılan belgelerdir. Tasarım Flutter ile uygulanmıştır. ** (This project was developed during a Mobile Programming lesson. The design and images are documents shared in a video on the YouTube channel @UiLover. The design was implemented with Flutter.) **
+- Bu proje Mobil Programlama dersinde öğrencilere anlatılırken geliştirilmiş bir projedir. Tasarım ve resimler YouTube @UiLover kanalındaki bir videoda paylaşılan belgelerdir. Tasarım Flutter ile uygulanmıştır. **(This project was developed during a Mobile Programming lesson. The design and images are documents shared in a video on the YouTube channel @UiLover. The design was implemented with Flutter.)**
 
 ---
 
