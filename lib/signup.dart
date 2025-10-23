@@ -1,0 +1,355 @@
+import 'package:flutter/material.dart';
+
+class SignUpPage extends StatelessWidget {
+  const SignUpPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Stack(
+                children: [
+                  SizedBox(
+                    width: double.infinity,
+                    height: 290,
+                    child: Image.asset(
+                      'assets/images/top_background.png',
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                  Positioned(
+                    bottom: 0,
+                    right: 0,
+                    child: SizedBox(
+                      height: 250,
+                      width: 160,
+                      child: Image.asset(
+                        'assets/images/women1.png',
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    top: 85,
+                    bottom: 0,
+                    left: 20,
+                    child: Column(
+                      children: [
+                        Text(
+                          "Create\naccount",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 36,
+                            fontWeight: FontWeight.w900,
+                            height: 1.3,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 35),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Your email",
+                      style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 4),
+                    TextField(
+                      decoration: InputDecoration(
+                        // Köşeleri yuvarlatmak için
+                        filled: true,
+                        fillColor: const Color.fromARGB(255, 255, 255, 255),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(
+                            12,
+                          ), // 12 yuvarlatılmış köşe
+                          // Kenarlık rengi ve kalınlığı (isteğe bağlı)
+                          borderSide: BorderSide(
+                            color: Colors.grey.withValues(
+                              alpha: 0.2,
+                            ), // Kenarlık rengi
+                            width: 1.0,
+                          ),
+                        ),
+
+                        // Odaklanıldığında da aynı yuvarlatılmış köşeleri kullanmak için (isteğe bağlı)
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                          borderSide: BorderSide(
+                            color: Color.fromARGB(255, 231, 236, 241)
+                                .withValues(
+                                  alpha: 0.7,
+                                ), // Odaklanıldığında kenarlık rengi
+                            width: 2.0,
+                          ),
+                        ),
+
+                        // Hint metni
+                        hintText: 'Enter your mail',
+
+                        // Hint metninin stili (alfası 0.7 olan renk burada ayarlanır)
+                        hintStyle: TextStyle(
+                          color: Colors.black.withAlpha(
+                            120,
+                          ), // Siyah rengin 0.7 alfa ile kullanımı
+                        ),
+
+                        // Metin alanının iç dolgusu (isteğe bağlı)
+                        contentPadding: const EdgeInsets.symmetric(
+                          horizontal: 16,
+                          vertical: 12,
+                        ),
+                      ),
+                      // TextField'ın kendisi için genel stil (isteğe bağlı)
+                      style: const TextStyle(
+                        color: Colors.black,
+                        fontSize: 16,
+                      ), // onChanged veya controller gibi diğer TextField özellikleri buraya eklenebilir
+                      onChanged: (text) {
+                        // Metin değiştiğinde yapılacaklar
+                      },
+                    ),
+                    SizedBox(height: 35),
+                    Text(
+                      "Your Password",
+                      style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 4),
+                    TextField(
+                      decoration: InputDecoration(
+                        // Köşeleri yuvarlatmak için
+                        filled: true,
+                        fillColor: const Color.fromARGB(255, 255, 255, 255),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(
+                            12,
+                          ), // 12 yuvarlatılmış köşe
+                          // Kenarlık rengi ve kalınlığı (isteğe bağlı)
+                          borderSide: BorderSide(
+                            color: Colors.grey.withValues(
+                              alpha: 0.2,
+                            ), // Kenarlık rengi
+                            width: 1.0,
+                          ),
+                        ),
+
+                        // Odaklanıldığında da aynı yuvarlatılmış köşeleri kullanmak için (isteğe bağlı)
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                          borderSide: BorderSide(
+                            color: Color.fromARGB(255, 231, 236, 241)
+                                .withValues(
+                                  alpha: 0.7,
+                                ), // Odaklanıldığında kenarlık rengi
+                            width: 2.0,
+                          ),
+                        ),
+
+                        // Hint metni
+                        hintText: 'Enter your password',
+
+                        // Hint metninin stili (alfası 0.7 olan renk burada ayarlanır)
+                        hintStyle: TextStyle(
+                          color: Colors.black.withAlpha(
+                            120,
+                          ), // Siyah rengin 0.7 alfa ile kullanımı
+                        ),
+
+                        // Metin alanının iç dolgusu (isteğe bağlı)
+                        contentPadding: const EdgeInsets.symmetric(
+                          horizontal: 16,
+                          vertical: 12,
+                        ),
+                      ),
+                      // TextField'ın kendisi için genel stil (isteğe bağlı)
+                      style: const TextStyle(
+                        color: Colors.black,
+                        fontSize: 16,
+                      ), // onChanged veya controller gibi diğer TextField özellikleri buraya eklenebilir
+                      onChanged: (text) {
+                        // Metin değiştiğinde yapılacaklar
+                      },
+                    ),
+                    SizedBox(height: 35),
+                    Text(
+                      "Repeat Password",
+                      style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 4),
+                    TextField(
+                      decoration: InputDecoration(
+                        // Köşeleri yuvarlatmak için
+                        filled: true,
+                        fillColor: const Color.fromARGB(255, 255, 255, 255),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(
+                            12,
+                          ), // 12 yuvarlatılmış köşe
+                          // Kenarlık rengi ve kalınlığı (isteğe bağlı)
+                          borderSide: BorderSide(
+                            color: Colors.grey.withValues(
+                              alpha: 0.2,
+                            ), // Kenarlık rengi
+                            width: 1.0,
+                          ),
+                        ),
+
+                        // Odaklanıldığında da aynı yuvarlatılmış köşeleri kullanmak için (isteğe bağlı)
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                          borderSide: BorderSide(
+                            color: Color.fromARGB(255, 231, 236, 241)
+                                .withValues(
+                                  alpha: 0.7,
+                                ), // Odaklanıldığında kenarlık rengi
+                            width: 2.0,
+                          ),
+                        ),
+
+                        // Hint metni
+                        hintText: 'Enter your password again',
+
+                        // Hint metninin stili (alfası 0.7 olan renk burada ayarlanır)
+                        hintStyle: TextStyle(
+                          color: Colors.black.withValues(
+                            alpha: 0.4,
+                          ), // Siyah rengin 0.7 alfa ile kullanımı
+                        ),
+
+                        // Metin alanının iç dolgusu (isteğe bağlı)
+                        contentPadding: const EdgeInsets.symmetric(
+                          horizontal: 16,
+                          vertical: 12,
+                        ),
+                      ),
+                      // TextField'ın kendisi için genel stil (isteğe bağlı)
+                      style: const TextStyle(
+                        color: Colors.black,
+                        fontSize: 16,
+                      ), // onChanged veya controller gibi diğer TextField özellikleri buraya eklenebilir
+                      onChanged: (text) {
+                        // Metin değiştiğinde yapılacaklar
+                      },
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 45),
+
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 24),
+                child: Stack(
+                  children: [
+                    FilledButton(
+                      onPressed: () {},
+                      style: FilledButton.styleFrom(
+                        backgroundColor: const Color.fromARGB(
+                          255,
+                          101,
+                          109,
+                          240,
+                        ), // Buton rengi (mavi)
+                        foregroundColor: Colors.white,
+                        minimumSize: Size(
+                          double.infinity,
+                          60,
+                        ), // Yükseklik 60 (genişliği isteğe göre ayarla)
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(
+                            30,
+                          ), // Köşeleri 10 yuvarlat
+                        ),
+                      ),
+                      child: Text(
+                        'Register',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 22,
+                          fontWeight: FontWeight.w900,
+                          height: 1.3,
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      top: 4,
+                      bottom: 4,
+                      right: 4,
+                      child: SizedBox(
+                        height: 54,
+                        width: 54,
+                        child: Image.asset(
+                          'assets/images/circle.png',
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 30),
+              Text(
+                "Already have an account?",
+                style: TextStyle(color: Colors.black, fontSize: 16),
+              ),
+              SizedBox(height: 30),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 24),
+                child: FilledButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/login');
+                  },
+                  style: FilledButton.styleFrom(
+                    backgroundColor: const Color.fromARGB(
+                      255,
+                      195,
+                      194,
+                      235,
+                    ), // Buton rengi (mavi)
+                    foregroundColor: Colors.black, // Yazı rengi (siyah)
+                    minimumSize: Size(
+                      double.infinity,
+                      60,
+                    ), // Yükseklik 60 (genişliği isteğe göre ayarla)
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(
+                        30,
+                      ), // Köşeleri 10 yuvarlat
+                    ),
+                  ),
+                  child: Text(
+                    'Login',
+                    style: TextStyle(
+                      color: Colors.black.withValues(alpha: 0.7),
+                      fontSize: 22,
+                      fontWeight: FontWeight.w900,
+                      height: 1.3,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
